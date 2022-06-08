@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul.navbar {
+         list-style-type: none;
+        margin: auto;
+        padding: 2px;
+        overflow: hidden;
+        background-color: rgb(78, 73, 73);
+      }
+
+      li.navbar {
+        float: left;
+      }
+
+      li.navbar a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Change the link color to #111 (black) on hover */
+      li.navbar a:hover {
+        height: auto;
+        background-color: rgb(0, 0, 0);
+      }
+
+      input[type="text"] {
+        padding: 13px 10px;
+        line-height: 3px;
+      }
+      div.nav {
+        height: 4 px;
+      }
+     
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1250px;
+        height: 450px;
+        position: relative;
+        margin: auto;
+      }
+
+      
+     
+
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 25px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        font-family: cursive;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #b6b6b6;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+      }
+
+      .logo {
+        height: 160px;
+        width: auto;
+        font-size: 15px;
+        padding: 0px 0px;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 9px;
+        width: 9px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      span.logoquarter {
+        background-color: rgb(78, 73, 73);
+        border-bottom-right-radius: 100%;
+        height: 180px;
+        width: 180px;
+       position:absolute;
+        margin: 0px;
+        padding: 2px 1px;
+        top: 0;
+        z-index: 1;
+      }
+
+      /*circularlinks*/
+      .card {
+        max-width: 200px;
+        height: 270px;
+        background-color: rgba(220, 167, 218, 0.537);
+        border-radius: 9%;
+        border-color: #b6b6b6;
+      }
+      .card-img-top {
+        width: 180px;
+        height: 160px;
+        border-radius: 50%;
+        margin: 10px;
+        right: 50%;
+      }
+      .card-title {
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        text-align: center;
+      }
+      .card-text {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+      .first :hover {
+        background-color: rgba(246, 104, 116, 0.68);
+      }
+      .first {
+        float: left;
+        margin: 24px;
+      }
+      /*hr styling*/
+      hr.style-eight {
+        clear: both;
+        overflow: visible; /* For IE */
+        padding: 0;
+        border: none;
+        border-top: medium double #333;
+        color: #333;
+        text-align: center;
+      }
+      hr.style-eight:after {
+        clear: both;
+        content: "§";
+        display: inline-block;
+        position: relative;
+        top: -0.7em;
+        font-size: 1.5em;
+        padding: 0 0.25em;
+        background: white;
+      }
+      /*2nd row styling*/
+      .card2 {
+        max-width: 200px;
+        height: 270px;
+        background-color: rgba(89, 186, 255, 0.338);
+        border-radius: 9%;
+        border-color: #b6b6b6;
+      }
+      .first2 :hover {
+        background-color: rgba(26, 99, 208, 0.719);
+      }
+      .first2 {
+        float: left;
+        margin: 24px;
+      }
+      /*offer paragraph styling*/
+      .logo-para-img {
+        background-color: rgba(255, 255, 255, 0.845);
+        float: right;
+        border-radius: 50%;
+        height: auto;
+        width: 220px;
+        padding: 10px 0px 0px 5px;
+      }
+      .para-and-img {
+        height: 250px;
+        background-color: lavenderblush;
+      }
+
+      .text-para {
+        font-style: normal;
+        font-size: 15px;
+        font-family: cursive;
+        padding: 35px 250px 30px 15px;
+        text-align: justify;
+      }
+      .heading-conditions {
+        float: left;
+        height: 250px;
+        margin: 10px, 10px, 10px, 10px;
+      }
+
+      .heading-offer {
+        font-family: unset;
+        text-align: center;
+
+        font-size: 25px;
+        background-image: linear-gradient(
+          60deg,
+          #e21143,
+          #9154e7,
+          rgba(22, 219, 180, 0.842)
+        );
+        -webkit-background-clip: text;
+        color: transparent;
+        margin: 10px;
+      }
+      /*footer section*/
+
+      .footer-sec1 {
+        height: 50px;
+        background-color: rgb(90, 41, 224);
+      }
+
+      .footer-sec2 {
+        height: 300px;
+        background-color: rgb(22, 3, 53);
+      }
+      .footer-sec3 {
+        font-size: 17px;
+        text-align: center;
+        color: white;
+        height: 50px;
+        background-color: rgb(0, 0, 0);
+      }
+      .sec1-text1 {
+        float: left;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 8px;
+        margin: 8px;
+      }
+      ul.footer {
+        list-style-type: none;
+        margin: auto;
+        padding: 2px;
+        overflow: hidden;
+        background-color: rgb(90, 41, 224);
+      }
+
+      li.footer {
+        float: right;
+      }
+
+      li.footer a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px 16px;
+        text-decoration: none;
+      }
+
+      /* Change the link color to #111 (black) on hover */
+      li.footer a:hover {
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.626);
+      }
+      div.sec2-part1
+    {
+      width:25%;
+      float:right;
+      height: 300px;
+ background-color:rgb(13, 2, 30);
+    }
+    div.sec2-part2
+    {
+      width:25%;
+      float:right;
+      height: 300px;
+      background-color: rgb(13, 2, 30);
+    }
+    div.sec2-part3
+    {
+      width:25%;
+      float:right;
+      height: 300px;
+      background-color:rgb(13, 2, 30);
+    }
+    div.sec2-part4
+    {
+      width:25%;
+      float:right;
+      height: 300px;
+ background-color: rgb(13, 2, 30);
+    }
+    h3.sec2-heading{
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+     color: white;
+
+    }
+    p.sec2-text{
+      color:white;
+     text-align:center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    }
+    div.sec1-para{
+      width: 300px;
+    }
+    li.sec2-part3-links{
+      text-align:center;
+
+    }
+    li.sec2-part3-links a{
+      color: white;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       font-size: 14px;
+    }
+    ul.sec2-part3-links-ul{
+      list-style-type: none;
+    }
+    p.sec4-text{
+      color:white;
+     text-align:center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <ul class="navbar">
+        <li class="navbar">
+          <a href="#"> <img src="home icon.png" alt="img" /> </a>
+        </li>
+        <li class="navbar"><a href="#"> Shop </a></li>
+        <li class="navbar"><a href="#"> Home </a></li>
+        <li class="navbar">
+          <form action="#">
+            <input type="text" placeholder=" What you looking for ?"
+            class=""heighttext" size="50"/>
+          </form>
+        </li>
+
+        <li class="navbar"><a href="#"> Cart </a></li>
+        <li class="navbar"><a href="#"> Checkout </a></li>
+        <div class="rightnavbar">
+          <li class="navbar"><a href="#"> login </a></li>
+        </div>
+      </ul>
+    </div>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 5</div>
+        <img src="slide5.jpg" style="width: 100%" height="450px" />
+        <div class="text"><b> 60% off on all top brands!!!</b></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 5</div>
+        <img src="slide2.jpg" style="width: 100%" height="450px" />
+        <div class="text"><b>70% off on traditionals!!</b></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 5</div>
+        <img src="slide3.jpg" style="width: 100%" height="450px" />
+        <div class="text"><b>50% off on tops and tees!!</b></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="slide1.jpg" style="width: 100%" height="450px" />
+        <div class="text"><b> 60% off on all top brands!!!</b></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="slide4.jpg" style="width: 100%" height="450px" />
+        <div class="text"><b> 60% off on all top brands!!!</b></div>
+      </div>
+
+     
+
+      <!-- logo-->
+      <img src="fashex logo2.png" alt="img" class="logo" />
+      <span class="logoquarter"></span>
+    </div>
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <!--circular links-->
+    <div class="link">
+      <a href="#" class="div-link-container" style="text-decoration: none">
+        <div class="first">
+          <div class="card" style="width: 18rem">
+            <img src="dr1.jpg" class="card-img-top" alt="img" />
+            <div class="card-body">
+              <p class="card-title"><b>Girls</b></p>
+              <p class="card-text">trendy and comfy wears</p>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="div-link-container" style="text-decoration: none">
+        <div class="first">
+          <div class="card" style="width: 18rem">
+            <img src="dr2.jpg" class="card-img-top" alt="img" />
+            <div class="card-body">
+              <p class="card-title"><b>Boys</b></p>
+              <p class="card-text">trendy and comfy wears</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="div-link-container" style="text-decoration: none">
+        <div class="first">
+          <div class="card" style="width: 18rem">
+            <img src="dr3.jpg" class="card-img-top" alt="img" />
+            <div class="card-body">
+              <p class="card-title"><b>Kids</b></p>
+              <p class="card-text">trendy and comfy wears</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="div-link-container" style="text-decoration: none">
+        <div class="first">
+          <div class="card" style="width: 18rem">
+            <img src="dr4.jpg" class="card-img-top" alt="img" />
+            <div class="card-body">
+              <p class="card-title"><b>Kids</b></p>
+              <p class="card-text">trendy and comfy wears</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="div-link-container" style="text-decoration: none">
+        <div class="first">
+          <div class="card" style="width: 18rem">
+            <img src="dr5.jpg" class="card-img-top" alt="img" />
+            <div class="card-body">
+              <p class="card-title"><b>Jewellery</b></p>
+              <p class="card-text">creativly designed</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!--hr -->
+    <hr class="style-eight" />
+
+    <!--2md row after hr-->
+    <div class="link">
+      <a href="#" class="div-link-container" style="text-decoration: none">
+        <div class="first2">
+          <div class="card2" style="width: 18rem">
+            <img src="fr6.jpg" class="card-img-top" alt="img" />
+            <div class="card-body">
+              <p class="card-title"><b>Footwears</b></p>
+              <p class="card-text">trendy and comfy wears</p>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="div-link-container" style="text-decoration: none">
+        <div class="first2">
+          <div class="card2" style="width: 18rem">
+            <img src="dr7.jpg" class="card-img-top" alt="img" />
+            <div class="card-body">
+              <p class="card-title"><b>Traditionals</b></p>
+              <p class="card-text">trendy and comfy wears</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="div-link-container" style="text-decoration: none">
+        <div class="first2">
+          <div class="card2" style="width: 18rem">
+            <img src="dr8.jpg" class="card-img-top" alt="img" />
+            <div class="card-body">
+              <p class="card-title"><b>Winterwear</b></p>
+              <p class="card-text">trendy and comfy wears</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="div-link-container" style="text-decoration: none">
+        <div class="first2">
+          <div class="card2" style="width: 18rem">
+            <img src="dr9.jpg" class="card-img-top" alt="img" />
+            <div class="card-body">
+              <p class="card-title"><b>Watches</b></p>
+              <p class="card-text">trendy and comfy wears</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="div-link-container" style="text-decoration: none">
+        <div class="first2">
+          <div class="card2" style="width: 18rem">
+            <img src="dr10.jpg" class="card-img-top" alt="img" />
+            <div class="card-body">
+              <p class="card-title"><b>Makeups</b></p>
+              <p class="card-text">creativly designed</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <hr class="style-eight" />
+    <div class="para-and-img">
+      <div class="heading-conditions">
+        <h2 class="heading-offer">
+          <br /><br /><br />
+          <b>
+            BIGGEST OFFER OF THE MONTH!!<br />
+            GRAB ALL THAT YOU CAN!</b
+          >
+        </h2>
+      </div>
+      <img src="fashex-logos_black.png" alt="img" class="logo-para-img" />
+
+      <p class="text-para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam id
+        totam at, optio ex architecto tempora! Autem minus quia vero illo iusto
+        velit ullam tempora quam? Nam explicabo maxime officiis. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Unde fuga dolores eveniet,
+        enim nihil, officia in nostrum, quod exercitationem quaerat ad similique
+        consequuntur non odio quae nobis assumenda! Dolor, molestiae! Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Laboriosam id totam
+        at, optio ex architecto tempora! Autem minus quia vero illo iusto velit
+      </p>
+    </div>
+    <br />
+
+    <div class="footer">
+      <div class="footer-sec1">
+        <p class="sec1-text1">Get connected with us on social networks :</p>
+        <div class="sec1-part2">
+          <ul class="footer">
+            <li class="footer">
+              <a href="#"> <img src="fb.png" alt="img" height="20px" /> </a>
+            </li>
+            <li class="footer">
+              <a href="#">
+                <img src="instagram.png" alt="img" height="20px" />
+              </a>
+            </li>
+            <li class="footer">
+              <a href="#"><img src="twitter.png" alt="img" height="20px" /> </a>
+            </li>
+
+            <li class="footer">
+              <a href="#"><img src="google.png" alt="img" height="20px" /> </a>
+            </li>
+            <li class="footer">
+              <a href="#"
+                ><img src="linkedin.png" alt="img" height="20px" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-sec2">
+        <div class="sec2-part1">
+          <h3 class="sec2-heading"><u> About fashex</u> </h3>
+          <br>
+          <div class="sec1-para">
+            <p class="sec2-text">
+            We rent all kinds of dresses at most affordable prices to deliver them to your doorstep
+          <br>
+          <br>
+          Why not dress up new everyday and save hefty on your pocket
+          </p>
+          </div>
+                   </div>
+                 <div class="sec2-part2">
+                  <h3 class="sec2-heading"> <u>Join us as a seller</u> </h3>
+                  <br> <p class="sec2-text">
+                  <i>join with us and earn!</i>
+                  <br><br>
+                  <i>
+                  join as a seller <br> <br>
+                  Join as a marketing agent <br> <br>
+                  Join for affilitate marketing <br> <br>
+                  join and refer and earn <br> <br>
+                </i></p>
+              </div>
+                 <div class="sec2-part3">
+                  <h3 class="sec2-heading"><u> Direct Links</u>  </h3>
+                <br>
+                <ul class="sec2-part3-links-ul">
+                  <li class="sec2-part3-links">
+                    <a href="#" style="text-decoration:none">Shop</a>
+                  </li> <br>
+                  <li class="sec2-part3-links">
+                    <a href="#" style="text-decoration:none">Cart</a>
+                  </li> 
+                  <br>
+                  <li class="sec2-part3-links">
+                    <a href="#" style="text-decoration:none">about us</a>
+                  </li> <br>
+                  <li class="sec2-part3-links">
+                    <a href="#" style="text-decoration:none">checkout</a>
+                  </li> <br>
+                  <li class="sec2-part3-links">
+                    <a href="#" style="text-decoration:none">payment procedures</a>
+                  </li>
+                </ul>      
+                </div>
+                
+                <div class="sec2-part4">
+                  <h3 class="sec2-heading"><u> Contact Us </u> </h3>
+                  <br>
+                  <p class="sec4-text">
+                  <img src="phone 24.png" alt="" height="20px"> (+091)-9876543210  <br>
+                <img src="phone 24.png" alt="" height="20px"> (+091)-9876543210  <br>
+                <br>
+                <img src="gmail 24.png" alt="" height="14px">  adthsgy@gmail.com  <br>
+              </p>
+              </div>
+      </div>
+
+      <div class="footer-sec3">
+        <br />
+        © 2020 Copyright:fasex.com:
+      </div>
+    </div>
+    <script>
+      let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+    </script>
+  </body>
+</html>
